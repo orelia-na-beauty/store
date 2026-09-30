@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ORÉLIA NA BEAUTY</title>
+
+<style>
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+  font-family:Arial,sans-serif;
+}
+
+body{
+  background:#faf7f2;
+  color:#2b211b;
+}
+
+header{
+  background:#17120f;
+  color:#d8b36a;
+  padding:18px 15px;
+  text-align:center;
+  position:sticky;
+  top:0;
+  z-index:10;
+}
+
+.logo{
+  font-family:Georgia,serif;
+  font-size:27px;
+  letter-spacing:2px;
+  font-weight:bold;
+}
+
+.logo span{
+  display:block;
+  font-size:13px;
+  letter-spacing:5px;
+  margin-top:5px;
+  color:#fff;
+}
+
+nav{
+  margin-top:15px;
+  display:flex;
+  justify-content:center;
+  gap:18px;
+  flex-wrap:wrap;
+}
+
+nav a{
+  color:white;
+  text-decoration:none;
+  font-size:14px;
+}
+
+.hero{
+  min-height:420px;
+  padding:70px 20px;
+  text-align:center;
+  background:linear-gradient(135deg,#ead8bd,#fffaf3);
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+}
+
+.hero h1{
+  font-family:Georgia,serif;
+  font-size:38px;
+  color:#5a3c24;
+  margin-bottom:15px;
+}
+
+.hero p{
+  max-width:600px;
+  line-height:1.9;
+  font-size:17px;
+  margin-bottom:25px;
+}
+
+.btn{
+  display:inline-block;
+  background:#17120f;
+  color:#d8b36a;
+  padding:13px 28px;
+  border-radius:30px;
+  text-decoration:none;
+  font-weight:bold;
+}
+
+section{
+  padding:45px 18px;
+  max-width:1100px;
+  margin:auto;
+}
+
+.title{
+  text-align:center;
+  margin-bottom:30px;
+}
+
+.title h2{
+  color:#6a482a;
+  font-size:28px;
+  margin-bottom:8px;
+}
+
+.title p{
+  color:#777;
+}
+
+.categories{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:14px;
+}
+
+.category{
+  background:white;
+  padding:25px 10px;
+  text-align:center;
+  border-radius:15px;
+  box-shadow:0 3px 15px #00000012;
+}
+
+.category .icon{
+  font-size:38px;
+  margin-bottom:10px;
+}
+
+.products{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:16px;
+}
+
+.product{
+  background:white;
+  border-radius:16px;
+  overflow:hidden;
+  box-shadow:0 3px 15px #00000012;
+  padding-bottom:18px;
+}
+
+.product-img{
+  height:170px;
+  background:linear-gradient(135deg,#e8d2af,#f8eee1);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:55px;
+}
+
+.product h3{
+  padding:15px 12px 5px;
+  font-size:17px;
+}
+
+.product p{
+  padding:0 12px;
+  color:#777;
+  font-size:13px;
+  line-height:1.6;
+}
+
+.price{
+  display:block;
+  padding:12px;
+  color:#a47731;
+  font-weight:bold;
+  font-size:18px;
+}
+
+.order{
+  margin:0 12px;
+  display:block;
+  text-align:center;
+  background:#17120f;
+  color:#fff;
+  padding:10px;
+  border-radius:25px;
+  text-decoration:none;
+}
+
+.about{
+  background:#17120f;
+  color:white;
+  max-width:none;
+  text-align:center;
+}
+
+.about h2{
+  color:#d8b36a;
+  margin-bottom:15px;
+}
+
+.about p{
+  max-width:700px;
+  margin:auto;
+  line-height:2;
+}
+
+.contact{
+  text-align:center;
+}
+
+footer{
+  background:#0e0b09;
+  color:#aaa;
+  text-align:center;
+  padding:25px 15px;
+  font-size:13px;
+}
+
+@media(min-width:700px){
+  .categories{
+    grid-template-columns:repeat(4,1fr);
+  }
+
+  .products{
+    grid-template-columns:repeat(4,1fr);
+  }
+
+  .hero h1{
+    font-size:52px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">
+    ORÉLIA NA
+    <span>BEAUTY</span>
+  </div>
+
+  <nav>
+    <a href="#home">الرئيسية</a>
+    <a href="#categories">الأقسام</a>
+    <a href="#products">المنتجات</a>
+    <a href="#contact">تواصل معنا</a>
+  </nav>
+</header>
+
+<section class="hero" id="home">
+  <h1>ORÉLIA NA BEAUTY</h1>
+
+  <p>
+    اكتشفي عالم الجمال والعناية الطبيعية
+    مع مجموعة مختارة من المنتجات الصحراوية،
+    مستحضرات التجميل، الزيوت الطبيعية ومنتجات العناية بالجسم.
+  </p>
+
+  <a class="btn" href="#products">اكتشفي منتجاتنا</a>
+</section>
+
+<section id="categories">
+
+  <div class="title">
+    <h2>أقسام المتجر</h2>
+    <p>اختاري ما يناسبك من مجموعات ORÉLIA NA BEAUTY</p>
+  </div>
+
+  <div class="categories">
+
+    <div class="category">
+      <div class="icon">🏜️</div>
+      <h3>منتوجات صحراوية</h3>
+    </div>
+
+    <div class="category">
+      <div class="icon">✨</div>
+      <h3>التجميل والعناية</h3>
+    </div>
+
+    <div class="category">
+      <div class="icon">🌿</div>
+      <h3>زيوت طبيعية</h3>
+    </div>
+
+    <div class="category">
+      <div class="icon">💗</div>
+      <h3>منتوجات زيادة الوزن</h3>
+    </div>
+
+  </div>
+</section>
+
+<section id="products">
+
+  <div class="title">
+    <h2>منتجاتنا</h2>
+    <p>منتجات مختارة بعناية من ORÉLIA NA BEAUTY</p>
+  </div>
+
+  <div class="products">
+
+    <div class="product">
+      <div class="product-img">🏜️</div>
+      <h3>ماسك صحراوي</h3>
+      <p>عناية طبيعية بالبشرة بمكونات مختارة.</p>
+      <span class="price">الثمن: 00 درهم</span>
+      <a class="order" href="https://wa.me/" target="_blank">اطلبي الآن</a>
+    </div>
+
+    <div class="product">
+      <div class="product-img">🌿</div>
+      <h3>زيت طبيعي</h3>
+      <p>زيت للعناية بالشعر والبشرة.</p>
+      <span class="price">الثمن: 00 درهم</span>
+      <a class="order" href="https://wa.me/" target="_blank">اطلبي الآن</a>
+    </div>
+
+    <div class="product">
+      <div class="product-img">✨</div>
+      <h3>منتج تجميلي</h3>
+      <p>اختيار مميز ضمن مجموعة العناية والجمال.</p>
+      <span class="price">الثمن: 00 درهم</span>
+      <a class="order" href="https://wa.me/" target="_blank">اطلبي الآن</a>
+    </div>
+
+    <div class="product">
+      <div class="product-img">💗</div>
+      <h3>منتج زيادة الوزن</h3>
+      <p>منتج مخصص للعناية بالجسم.</p>
+      <span class="price">الثمن: 00 درهم</span>
+      <a class="order" href="https://wa.me/" target="_blank">اطلبي الآن</a>
+    </div>
+
+  </div>
+</section>
+
+<section class="about">
+
+  <h2>لماذا ORÉLIA NA BEAUTY؟</h2>
+
+  <p>
+    نهتم بتقديم منتجات مختارة بعناية لعشاق الجمال والعناية الطبيعية،
+    مع التركيز على الجودة، الأناقة وتجربة تسوق بسيطة ومريحة.
+  </p>
+
+</section>
+
+<section id="contact" class="contact">
+
+  <div class="title">
+    <h2>تواصلي معنا</h2>
+    <p>للطلب والاستفسار تواصلي معنا مباشرة</p>
+  </div>
+
+  <a class="btn" href="https://wa.me/" target="_blank">
+    💬 الطلب عبر واتساب
+  </a>
+
+</section>
+
+<footer>
+  © 2026 ORÉLIA NA BEAUTY
+  <br><br>
+  الجمال يبدأ بالعناية
+</footer>
+
+</body>
+                                  </html>
