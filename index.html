@@ -3,497 +3,403 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>ORÉLIA NA BEAUTY</title>
 
 <style>
 *{
-  box-sizing:border-box;
-  margin:0;
-  padding:0;
-  font-family:Arial,sans-serif;
+box-sizing:border-box;
+margin:0;
+padding:0;
+font-family:Arial,sans-serif;
 }
 
 body{
-  background:#fafdf9;
-  color:#1f2a22;
+background:#f8f5ef;
+color:#2d241d;
 }
 
-/* HEADER */
 header{
-  background:#ffffff;
-  color:#2f7d32;
-  padding:18px 15px;
-  text-align:center;
-  position:sticky;
-  top:0;
-  z-index:10;
-  box-shadow:0 2px 12px #00000012;
+background:#123c2f;
+color:#d8b36a;
+padding:12px 15px;
+text-align:center;
+position:sticky;
+top:0;
+z-index:1000;
+box-shadow:0 3px 15px #0003;
 }
 
-.logo{
-  font-family:Georgia,serif;
-  font-size:32px;
-  letter-spacing:3px;
-  font-weight:bold;
-  color:#2f7d32;
-  line-height:1.1;
+.logo-img{
+width:90px;
+height:90px;
+object-fit:cover;
+border-radius:50%;
+border:3px solid #d8b36a;
+background:white;
 }
 
-.logo span{
-  display:block;
-  font-family:Arial,sans-serif;
-  font-size:14px;
-  letter-spacing:4px;
-  margin-top:6px;
-  color:#2f7d32;
-}
-
-/* NAVIGATION */
 nav{
-  margin-top:15px;
-  display:flex;
-  justify-content:center;
-  gap:18px;
-  flex-wrap:wrap;
+margin-top:12px;
+display:flex;
+justify-content:center;
+gap:15px;
+flex-wrap:wrap;
 }
 
 nav a{
-  color:#333;
-  text-decoration:none;
-  font-size:14px;
+color:white;
+text-decoration:none;
+font-size:13px;
 }
 
-nav a:hover{
-  color:#2f7d32;
+.cart-button{
+position:fixed;
+left:15px;
+bottom:20px;
+z-index:2000;
+background:#d8b36a;
+color:#123c2f;
+width:58px;
+height:58px;
+border-radius:50%;
+border:none;
+font-size:25px;
+box-shadow:0 4px 15px #0004;
 }
 
-/* HERO */
+.cart-count{
+position:absolute;
+top:-5px;
+right:-5px;
+background:#b32929;
+color:white;
+width:23px;
+height:23px;
+border-radius:50%;
+font-size:12px;
+display:flex;
+align-items:center;
+justify-content:center;
+}
+
 .hero{
-  min-height:420px;
-  padding:70px 20px;
-  text-align:center;
-  background:linear-gradient(135deg,#dff1df,#f8fff8);
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  align-items:center;
+min-height:430px;
+padding:60px 20px;
+text-align:center;
+background:linear-gradient(#123c2fe6,#123c2fb8),
+linear-gradient(135deg,#d9c49d,#fffaf3);
+color:white;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
 }
 
 .hero h1{
-  font-family:Georgia,serif;
-  font-size:38px;
-  color:#276b2b;
-  margin-bottom:15px;
+font-family:Georgia,serif;
+font-size:38px;
+color:#e2c47d;
+margin-bottom:18px;
 }
 
 .hero p{
-  max-width:600px;
-  line-height:1.9;
-  font-size:17px;
-  margin-bottom:25px;
+max-width:650px;
+line-height:2;
+font-size:16px;
+margin-bottom:25px;
 }
 
 .btn{
-  display:inline-block;
-  background:#2f7d32;
-  color:white;
-  padding:13px 28px;
-  border-radius:30px;
-  text-decoration:none;
-  font-weight:bold;
+display:inline-block;
+background:#d8b36a;
+color:#123c2f;
+padding:13px 28px;
+border-radius:30px;
+text-decoration:none;
+font-weight:bold;
+border:none;
 }
 
-.btn:hover{
-  background:#246428;
-}
-
-/* SECTIONS */
 section{
-  padding:45px 18px;
-  max-width:1100px;
-  margin:auto;
+padding:45px 18px;
+max-width:1100px;
+margin:auto;
 }
 
 .title{
-  text-align:center;
-  margin-bottom:30px;
+text-align:center;
+margin-bottom:30px;
 }
 
 .title h2{
-  color:#276b2b;
-  font-size:28px;
-  margin-bottom:8px;
+color:#174b3a;
+font-size:28px;
+margin-bottom:8px;
 }
 
 .title p{
-  color:#777;
+color:#777;
 }
 
-/* CATEGORIES */
 .categories{
-  display:grid;
-  grid-template-columns:repeat(2,1fr);
-  gap:14px;
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:12px;
 }
 
 .category{
-  background:white;
-  padding:25px 10px;
-  text-align:center;
-  border-radius:15px;
-  box-shadow:0 3px 15px #00000012;
-  border:1px solid #e2f0e2;
+background:white;
+padding:22px 10px;
+text-align:center;
+border-radius:15px;
+box-shadow:0 3px 15px #00000012;
+border-bottom:3px solid #d8b36a;
 }
 
 .category .icon{
-  font-size:38px;
-  margin-bottom:10px;
+font-size:34px;
+margin-bottom:8px;
 }
 
-/* PRODUCTS */
+.category h3{
+font-size:15px;
+}
+
 .products{
-  display:grid;
-  grid-template-columns:repeat(2,1fr);
-  gap:16px;
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:15px;
 }
 
 .product{
-  background:white;
-  border-radius:16px;
-  overflow:hidden;
-  box-shadow:0 3px 15px #00000012;
-  padding-bottom:18px;
-  border:1px solid #e2f0e2;
+background:white;
+border-radius:16px;
+overflow:hidden;
+box-shadow:0 3px 15px #00000012;
+padding-bottom:15px;
 }
 
 .product-img{
-  height:170px;
-  background:linear-gradient(135deg,#dcefdc,#f5fbf5);
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-size:55px;
+width:100%;
+height:190px;
+object-fit:cover;
+display:block;
+background:#eee;
 }
 
 .product h3{
-  padding:15px 12px 5px;
-  font-size:17px;
+padding:13px 12px 5px;
+font-size:16px;
+color:#174b3a;
 }
 
 .product p{
-  padding:0 12px;
-  color:#777;
-  font-size:13px;
-  line-height:1.6;
+padding:0 12px;
+color:#777;
+font-size:13px;
+line-height:1.6;
+min-height:42px;
 }
 
 .price{
-  display:block;
-  padding:12px;
-  color:#2f7d32;
-  font-weight:bold;
-  font-size:18px;
+display:block;
+padding:10px 12px;
+color:#a47731;
+font-weight:bold;
+font-size:18px;
 }
 
-.order{
-  margin:0 12px;
-  display:block;
-  text-align:center;
-  background:#2f7d32;
-  color:#fff;
-  padding:10px;
-  border-radius:25px;
-  text-decoration:none;
+.add-cart{
+margin:0 12px;
+width:calc(100% - 24px);
+background:#174b3a;
+color:white;
+border:none;
+padding:11px;
+border-radius:25px;
+font-weight:bold;
+cursor:pointer;
 }
 
-.order:hover{
-  background:#246428;
+.add-cart:active{
+transform:scale(.97);
 }
 
-/* ABOUT */
 .about{
-  background:#18351c;
-  color:white;
-  max-width:none;
-  text-align:center;
+background:#123c2f;
+color:white;
+max-width:none;
+text-align:center;
 }
 
 .about h2{
-  color:#8fca91;
-  margin-bottom:15px;
+color:#d8b36a;
+margin-bottom:15px;
 }
 
 .about p{
-  max-width:700px;
-  margin:auto;
-  line-height:2;
+max-width:700px;
+margin:auto;
+line-height:2;
 }
 
-/* CONTACT */
 .contact{
-  text-align:center;
+text-align:center;
 }
 
-/* FOOTER */
 footer{
-  background:#102313;
-  color:#b9c8ba;
-  text-align:center;
-  padding:25px 15px;
-  font-size:13px;
+background:#0c2921;
+color:#aaa;
+text-align:center;
+padding:25px 15px;
+font-size:13px;
 }
 
-/* DESKTOP */
+/* السلة */
+
+.cart-overlay{
+position:fixed;
+inset:0;
+background:#0008;
+z-index:3000;
+display:none;
+}
+
+.cart{
+position:absolute;
+left:0;
+top:0;
+width:92%;
+max-width:430px;
+height:100%;
+background:white;
+padding:20px;
+overflow-y:auto;
+}
+
+.cart h2{
+color:#174b3a;
+margin-bottom:20px;
+}
+
+.close-cart{
+position:absolute;
+left:15px;
+top:15px;
+border:none;
+background:none;
+font-size:25px;
+}
+
+.cart-item{
+display:flex;
+align-items:center;
+gap:8px;
+padding:12px 0;
+border-bottom:1px solid #eee;
+}
+
+.cart-item-info{
+flex:1;
+}
+
+.cart-item-info h4{
+font-size:14px;
+margin-bottom:5px;
+}
+
+.cart-item-info span{
+color:#a47731;
+font-size:13px;
+}
+
+.qty{
+display:flex;
+align-items:center;
+gap:7px;
+}
+
+.qty button{
+width:27px;
+height:27px;
+border:none;
+border-radius:50%;
+background:#174b3a;
+color:white;
+}
+
+.remove{
+border:none;
+background:none;
+color:#b32929;
+font-size:18px;
+}
+
+.cart-total{
+margin-top:20px;
+padding:15px;
+background:#f5efe4;
+border-radius:12px;
+font-size:19px;
+font-weight:bold;
+color:#174b3a;
+}
+
+.whatsapp{
+display:block;
+width:100%;
+margin-top:15px;
+padding:14px;
+background:#25D366;
+color:white;
+text-align:center;
+border-radius:30px;
+text-decoration:none;
+font-weight:bold;
+}
+
+.clear{
+width:100%;
+margin-top:10px;
+padding:10px;
+border:1px solid #b32929;
+background:white;
+color:#b32929;
+border-radius:25px;
+}
+
+.empty{
+text-align:center;
+color:#777;
+padding:40px 10px;
+}
+
 @media(min-width:700px){
 
-  .categories{
-    grid-template-columns:repeat(4,1fr);
-  }
+.categories{
+grid-template-columns:repeat(3,1fr);
+}
 
-  .products{
-    grid-template-columns:repeat(4,1fr);
-  }
+.products{
+grid-template-columns:repeat(4,1fr);
+}
 
-  .hero h1{
-    font-size:52px;
-  }
+.hero h1{
+font-size:52px;
+}
+
 }
 </style>
 </head>
 
 <body>
 
-<!-- HEADER -->
 <header>
 
-  <div class="logo">
-    ORÉLIA
-    <span>NA BEAUTY</span>
-  </div>
-
-  <nav>
-    <a href="#home">الرئيسية</a>
-    <a href="#categories">الأقسام</a>
-    <a href="#products">المنتجات</a>
-    <a href="#contact">تواصل معنا</a>
-  </nav>
-
-</header>
-
-
-<!-- HERO -->
-<section class="hero" id="home">
-
-  <h1>ORÉLIA NA BEAUTY</h1>
-
-  <p>
-    اكتشفي عالم الجمال والعناية الطبيعية
-    مع مجموعة مختارة من المنتجات الصحراوية،
-    مستحضرات التجميل، الزيوت الطبيعية ومنتجات العناية بالجسم.
-  </p>
-
-  <a class="btn" href="#products">
-    اكتشفي منتجاتنا
-  </a>
-
-</section>
-
-
-<!-- CATEGORIES -->
-<section id="categories">
-
-  <div class="title">
-    <h2>أقسام المتجر</h2>
-    <p>اختاري ما يناسبك من مجموعات ORÉLIA NA BEAUTY</p>
-  </div>
-
-  <div class="categories">
-
-    <div class="category">
-      <div class="icon">🏜️</div>
-      <h3>منتوجات صحراوية</h3>
-    </div>
-
-    <div class="category">
-      <div class="icon">✨</div>
-      <h3>التجميل والعناية</h3>
-    </div>
-
-    <div class="category">
-      <div class="icon">🌿</div>
-      <h3>زيوت طبيعية</h3>
-    </div>
-
-    <div class="category">
-      <div class="icon">💗</div>
-      <h3>منتوجات زيادة الوزن</h3>
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- PRODUCTS -->
-<section id="products">
-
-  <div class="title">
-    <h2>منتجاتنا</h2>
-    <p>منتجات مختارة بعناية من ORÉLIA NA BEAUTY</p>
-  </div>
-
-  <div class="products">
-
-    <div class="product">
-
-      <div class="product-img">🏜️</div>
-
-      <h3>ماسك صحراوي</h3>
-
-      <p>
-        عناية طبيعية بالبشرة بمكونات مختارة.
-      </p>
-
-      <span class="price">
-        الثمن: 00 درهم
-      </span>
-
-      <a
-        class="order"
-        href="https://wa.me/212613386049?text=السلام%20عليكم،%20أريد%20الطلب%20من%20ORÉLIA%20NA%20BEAUTY"
-        target="_blank">
-        اطلب الآن
-      </a>
-
-    </div>
-
-
-    <div class="product">
-
-      <div class="product-img">🌿</div>
-
-      <h3>زيت طبيعي</h3>
-
-      <p>
-        زيت للعناية بالشعر والبشرة.
-      </p>
-
-      <span class="price">
-        الثمن: 00 درهم
-      </span>
-
-      <a
-        class="order"
-        href="https://wa.me/212613386049?text=السلام%20عليكم،%20أريد%20الطلب%20من%20ORÉLIA%20NA%20BEAUTY"
-        target="_blank">
-        اطلب الآن
-      </a>
-
-    </div>
-
-
-    <div class="product">
-
-      <div class="product-img">✨</div>
-
-      <h3>منتج تجميلي</h3>
-
-      <p>
-        اختيار مميز ضمن مجموعة العناية والجمال.
-      </p>
-
-      <span class="price">
-        الثمن: 00 درهم
-      </span>
-
-      <a
-        class="order"
-        href="https://wa.me/212613386049?text=السلام%20عليكم،%20أريد%20الطلب%20من%20ORÉLIA%20NA%20BEAUTY"
-        target="_blank">
-        اطلب الآن
-      </a>
-
-    </div>
-
-
-    <div class="product">
-
-      <div class="product-img">💗</div>
-
-      <h3>منتج زيادة الوزن</h3>
-
-      <p>
-        منتج مخصص للعناية بالجسم.
-      </p>
-
-      <span class="price">
-        الثمن: 00 درهم
-      </span>
-
-  <a class="order" href="https://wa.me/212613386049" target="_blank">
-  اطلب الآن
-  </a>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- ABOUT -->
-<section class="about">
-
-  <h2>
-    لماذا ORÉLIA NA BEAUTY؟
-  </h2>
-
-  <p>
-    نهتم بتقديم منتجات مختارة بعناية لعشاق الجمال والعناية الطبيعية،
-    مع التركيز على الجودة، الأناقة وتجربة تسوق بسيطة ومريحة.
-  </p>
-
-</section>
-
-
-<!-- CONTACT -->
-<section id="contact" class="contact">
-
-  <div class="title">
-
-    <h2>
-      تواصلي معنا
-    </h2>
-
-    <p>
-      للطلب والاستفسار تواصلي معنا مباشرة
-    </p>
-
-  </div>
-
-  <a
-    class="btn"
-    href="https://wa.me/212613386049"
-    target="_blank">
-
-    💬 الطلب عبر واتساب
-
-  </a>
-
-</section>
-
-
-<!-- FOOTER -->
-<footer>
-
-  © 2026 ORÉLIA NA BEAUTY
-
-  <br><br>
-
-  الجمال يبدأ بالعناية
-
-</footer>
-
-</body>
-</html>
+<img src="logo.png" class="logo-img" alt="ORÉLIA NA BEAUTY">
+
+<nav>
+<a href="#home">الرئيسية</a>
+<a href="#categories">الأقسام</a>
+<a href="#weight">زيادة الوزن</a>
+<a href="#hair">الع
