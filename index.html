@@ -1,234 +1,356 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>مجموعة العناية بالبشرة والجسم | 199 درهم</title>
+<title>مجموعة العناية بالبشرة والجسم</title>
 
-  <meta name="description" content="مجموعة العناية والجمال بروح صحراوية أصيلة. ماسك القنبلة الصحراوية، النيلة الصحراوية، مخمرية، كريم كعب الغزال، لوشن ورشوش صحراوي. 199 درهم والتوصيل مجاني لجميع المدن المغربية.">
+<style>
+*{
+  box-sizing:border-box;
+}
 
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+body{
+  margin:0;
+  font-family:Arial,Tahoma,sans-serif;
+  background:#080808;
+  color:white;
+}
 
-    body {
-      font-family: Tahoma, Arial, sans-serif;
-      background: #0b0b0b;
-      color: #fff;
-      line-height: 1.8;
-    }
+header{
+  text-align:center;
+  padding:22px 15px;
+  border-bottom:1px solid #b89545;
+}
 
-    .container {
-      width: 92%;
-      max-width: 1050px;
-      margin: auto;
-    }
+.logo{
+  color:#e3c15b;
+  font-size:25px;
+  font-weight:bold;
+}
 
-    /* HEADER */
-    header {
-      padding: 18px 0;
-      background: #080808;
-      border-bottom: 1px solid #b89545;
-      text-align: center;
-    }
+.hero{
+  text-align:center;
+  padding:35px 15px;
+  background:linear-gradient(#18120a,#080808);
+}
 
-    .brand {
-      color: #d9b65a;
-      font-size: 27px;
-      font-weight: bold;
-      letter-spacing: 1px;
-    }
+.badge{
+  display:inline-block;
+  background:#e3c15b;
+  color:#111;
+  padding:8px 20px;
+  border-radius:30px;
+  font-weight:bold;
+  margin-bottom:18px;
+}
 
-    .small-text {
-      color: #ddd;
-      font-size: 13px;
-    }
+h1{
+  color:#e6c765;
+  font-size:30px;
+  margin:10px 0;
+}
 
-    /* HERO */
-    .hero {
-      padding: 35px 0 45px;
-      text-align: center;
-      background:
-        radial-gradient(circle at top, #3a2b10 0%, #111 35%, #080808 75%);
-    }
+.subtitle{
+  color:#ddd;
+  font-size:17px;
+  line-height:1.9;
+}
 
-    .badge {
-      display: inline-block;
-      background: #d9b65a;
-      color: #111;
-      padding: 7px 18px;
-      border-radius: 30px;
-      font-weight: bold;
-      margin-bottom: 15px;
-    }
+.product{
+  margin:25px auto;
+  max-width:650px;
+}
 
-    h1 {
-      color: #e5c76a;
-      font-size: 34px;
-      line-height: 1.4;
-      margin-bottom: 12px;
-    }
+.product img{
+  width:100%;
+  height:auto;
+  display:block;
+  border-radius:18px;
+  border:2px solid #c5a34b;
+}
 
-    .hero-subtitle {
-      color: #eee;
-      font-size: 17px;
-      max-width: 700px;
-      margin: auto;
-    }
+.price-box{
+  max-width:500px;
+  margin:25px auto;
+  padding:25px 15px;
+  border:1px solid #9e8035;
+  border-radius:20px;
+  background:#111;
+}
 
-    /* PRODUCT IMAGE */
-    .product-image {
-      margin: 28px auto;
-      max-width: 650px;
-      background: #fff;
-      padding: 8px;
-      border-radius: 18px;
-      border: 2px solid #c9a94e;
-      box-shadow: 0 0 35px rgba(211, 175, 75, 0.25);
-    }
+.price{
+  color:#f0ce67;
+  font-size:42px;
+  font-weight:bold;
+}
 
-    .product-image img {
-      width: 100%;
-      display: block;
-      border-radius: 12px;
-    }
+.free{
+  font-size:18px;
+  font-weight:bold;
+  margin-top:8px;
+}
 
-    /* PRICE */
-    .price-box {
-      margin: 20px auto;
-      max-width: 430px;
-      padding: 20px;
-      border: 1px solid #c9a94e;
-      border-radius: 18px;
-      background: linear-gradient(145deg, #171717, #0d0d0d);
-    }
+.whatsapp{
+  display:block;
+  margin:20px auto 0;
+  max-width:400px;
+  padding:15px;
+  border-radius:40px;
+  background:#e2bd55;
+  color:#111;
+  text-decoration:none;
+  font-size:19px;
+  font-weight:bold;
+}
 
-    .old-price {
-      color: #999;
-      text-decoration: line-through;
-      font-size: 17px;
-    }
+section{
+  padding:40px 15px;
+}
 
-    .price {
-      color: #f0ce67;
-      font-size: 42px;
-      font-weight: bold;
-    }
+.container{
+  max-width:900px;
+  margin:auto;
+}
 
-    .delivery {
-      color: #fff;
-      font-size: 18px;
-      font-weight: bold;
-      margin-top: 5px;
-    }
+.title{
+  text-align:center;
+  color:#e5c45f;
+  font-size:27px;
+  margin-bottom:25px;
+}
 
-    /* BUTTON */
-    .order-btn {
-      display: inline-block;
-      margin-top: 20px;
-      background: linear-gradient(135deg, #e4c15e, #a87c20);
-      color: #111;
-      text-decoration: none;
-      font-size: 20px;
-      font-weight: bold;
-      padding: 14px 35px;
-      border-radius: 40px;
-      box-shadow: 0 8px 25px rgba(214, 174, 72, 0.25);
-      transition: 0.2s;
-    }
+.description{
+  text-align:center;
+  color:#ddd;
+  font-size:17px;
+  line-height:2;
+}
 
-    .order-btn:hover {
-      transform: scale(1.03);
-    }
+.products{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:15px;
+}
 
-    /* SECTION */
-    section {
-      padding: 45px 0;
-    }
+.card{
+  background:#121212;
+  border:1px solid #665321;
+  border-radius:15px;
+  padding:20px 12px;
+  text-align:center;
+}
 
-    .section-title {
-      text-align: center;
-      color: #e5c76a;
-      font-size: 27px;
-      margin-bottom: 25px;
-    }
+.card .emoji{
+  font-size:32px;
+}
 
-    .intro {
-      text-align: center;
-      color: #ddd;
-      max-width: 750px;
-      margin: auto;
-      font-size: 17px;
-    }
+.card h3{
+  color:#e4c15e;
+  font-size:18px;
+}
 
-    /* PRODUCTS */
-    .products {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 15px;
-      margin-top: 25px;
-    }
+.card p{
+  color:#ccc;
+  font-size:14px;
+  line-height:1.8;
+}
 
-    .card {
-      background: linear-gradient(145deg, #171717, #0e0e0e);
-      border: 1px solid #695523;
-      border-radius: 15px;
-      padding: 20px;
-      text-align: center;
-    }
+.offer{
+  text-align:center;
+  padding:45px 15px;
+  background:linear-gradient(#171107,#080808);
+  border-top:1px solid #80672b;
+  border-bottom:1px solid #80672b;
+}
 
-    .icon {
-      font-size: 34px;
-      margin-bottom: 8px;
-    }
+.offer h2{
+  color:#e8c963;
+  font-size:30px;
+}
 
-    .card h3 {
-      color: #e4c15e;
-      font-size: 18px;
-      margin-bottom: 7px;
-    }
+footer{
+  text-align:center;
+  color:#999;
+  padding:30px 15px;
+  line-height:2;
+}
 
-    .card p {
-      color: #ccc;
-      font-size: 14px;
-    }
+@media(max-width:600px){
+  h1{
+    font-size:26px;
+  }
 
-    /* BENEFITS */
-    .benefits {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 15px;
-      margin-top: 25px;
-    }
+  .products{
+    grid-template-columns:1fr;
+  }
 
-    .benefit {
-      text-align: center;
-      background: #111;
-      border: 1px solid #4d401f;
-      padding: 18px 10px;
-      border-radius: 14px;
-    }
+  .price{
+    font-size:36px;
+  }
+}
+</style>
+</head>
 
-    .benefit span {
-      font-size: 30px;
-      display: block;
-      margin-bottom: 5px;
-    }
+<body>
 
-    .benefit strong {
-      color: #e4c15e;
-      font-size: 15px;
-    }
+<header>
+  <div class="logo">ORÉLIA NA BEAUTY</div>
+  <div>الجمال يبدأ من العناية بنفسك ✨</div>
+</header>
 
-    /* OFFER */
-    .offer {
-      text-align: center;
-      background:
-        radial-gradient(circle, #34260d 0%, #111 65%);
-      border-top: 1px solid #8d7130;
-      border-bottom: 1px solid #8d7130;
-   
+<div class="hero">
+
+  <div class="badge">🔥 عرض خاص</div>
+
+  <h1>مجموعة العناية بالبشرة والجسم</h1>
+
+  <p class="subtitle">
+    مجموعة مختارة بعناية بروح صحراوية أصيلة،
+    تجمع بين العناية والجمال والروائح الرائعة.
+  </p>
+
+  <div class="product">
+    <img src="product.jpg" alt="مجموعة العناية بالبشرة والجسم">
+  </div>
+
+  <div class="price-box">
+
+    <div class="price">199 درهم فقط</div>
+
+    <div class="free">
+      🚚 التوصيل مجاني لجميع المدن المغربية 🇲🇦
+    </div>
+
+    <a class="whatsapp"
+       href="https://wa.me/212613386049?text=السلام%20عليكم،%20بغيت%20نطلب%20مجموعة%20العناية%20بالبشرة%20والجسم%20بـ199%20درهم،%20والتوصيل%20مجاني.%0Aالاسم:%0Aالهاتف:%0Aالمدينة:%0Aالعنوان:"
+       target="_blank">
+       📲 اطلبي الآن عبر واتساب
+    </a>
+
+  </div>
+
+</div>
+
+
+<section>
+<div class="container">
+
+<h2 class="title">✨ مجموعة الجمال الصحراوي</h2>
+
+<p class="description">
+دلّلي راسك بمجموعة متكاملة للعناية بالبشرة والجسم،
+واستمتعي بروائح صحراوية رائعة وإحساس بالنعومة والانتعاش.
+<br>
+كل هاد المنتجات مجموعين ليك في باك واحد وبثمن مميز.
+</p>
+
+</div>
+</section>
+
+
+<section>
+<div class="container">
+
+<h2 class="title">🌸 شنو كاين داخل الباك؟</h2>
+
+<div class="products">
+
+<div class="card">
+<div class="emoji">🌸</div>
+<h3>ماسك القنبلة الصحراوية</h3>
+<p>
+للتفتيح والتبييض والعناية بمظهر البشرة ومنحها إشراقة جميلة.
+</p>
+</div>
+
+<div class="card">
+<div class="emoji">💜</div>
+<h3>ماسك النيلة الصحراوية</h3>
+<p>
+عناية مميزة بالبشرة وإحساس بالانتعاش والنعومة.
+</p>
+</div>
+
+<div class="card">
+<div class="emoji">🌺</div>
+<h3>مخمرية صحراوية</h3>
+<p>
+ترطيب ورائحة رائعة، نقية وزكية تخلي حضورك مميزاً.
+</p>
+</div>
+
+<div class="card">
+<div class="emoji">👣</div>
+<h3>كريم كعب الغزال</h3>
+<p>
+يساعد على ترطيب القدمين والعناية بمظهر الجلد الجاف والمتشقق.
+</p>
+</div>
+
+<div class="card">
+<div class="emoji">🤍</div>
+<h3>لوشن برائحة غزالة</h3>
+<p>
+ترطيب للجسم مع رائحة أنيقة وجذابة.
+</p>
+</div>
+
+<div class="card">
+<div class="emoji">✨</div>
+<h3>رشوش صحراوي أصيل</h3>
+<p>
+رائحة رائعة وجذابة تكمل إطلالتك وتخلي حضورك مميزاً.
+</p>
+</div>
+
+</div>
+
+</div>
+</section>
+
+
+<div class="offer">
+
+<h2>🔥 العرض ما خاصكش تفوتيه</h2>
+
+<p>
+المجموعة كاملة
+</p>
+
+<div class="price">199 درهم فقط</div>
+
+<p>
+🚚 التوصيل مجاني لجميع المدن المغربية 🇲🇦
+</p>
+
+<a class="whatsapp"
+   href="https://wa.me/212613386049?text=السلام%20عليكم،%20بغيت%20نطلب%20مجموعة%20العناية%20بالبشرة%20والجسم%20بـ199%20درهم،%20والتوصيل%20مجاني.%0Aالاسم:%0Aالهاتف:%0Aالمدينة:%0Aالعنوان:"
+   target="_blank">
+   🛍️ اطلبي المجموعة الآن
+</a>
+
+</div>
+
+
+<footer>
+
+✨ مجموعة العناية بالبشرة والجسم ✨
+
+<br>
+
+199 درهم فقط — التوصيل مجاني لجميع المدن المغربية 🇲🇦
+
+<br>
+
+📱 واتساب: 0613386049
+
+<br><br>
+
+© 2026 ORÉLIA NA BEAUTY
+
+</footer>
+
+</body>
+</html>
