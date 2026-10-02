@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>مجموعة العناية بالبشرة والجسم</title>
+<title>ORÉLIA NA BEAUTY | مجموعة العناية بالبشرة والجسم</title>
 
 <style>
 *{
@@ -103,6 +103,8 @@ h1{
   text-decoration:none;
   font-size:19px;
   font-weight:bold;
+  border:none;
+  cursor:pointer;
 }
 
 section{
@@ -157,6 +159,102 @@ section{
   line-height:1.8;
 }
 
+/* استمارة الطلب */
+
+.order-section{
+  padding:45px 15px;
+  background:linear-gradient(#171107,#080808);
+}
+
+.order-box{
+  max-width:650px;
+  margin:auto;
+  background:#111;
+  border:2px solid #b89545;
+  border-radius:20px;
+  padding:25px 18px;
+  box-shadow:0 0 20px rgba(212,175,55,0.12);
+}
+
+.order-box h2{
+  text-align:center;
+  color:#e8c963;
+  font-size:29px;
+  margin-top:0;
+  margin-bottom:10px;
+}
+
+.order-subtitle{
+  text-align:center;
+  color:#ccc;
+  margin-bottom:25px;
+  line-height:1.8;
+}
+
+.form-group{
+  margin-bottom:18px;
+}
+
+.form-group label{
+  display:block;
+  color:#e5c45f;
+  font-weight:bold;
+  margin-bottom:7px;
+  font-size:16px;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select{
+  width:100%;
+  padding:14px;
+  border-radius:10px;
+  border:1px solid #665321;
+  background:#1b1b1b;
+  color:white;
+  font-size:16px;
+  font-family:Arial,Tahoma,sans-serif;
+  outline:none;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus{
+  border-color:#e5c45f;
+}
+
+.form-group textarea{
+  min-height:100px;
+  resize:vertical;
+}
+
+.submit-button{
+  width:100%;
+  padding:16px;
+  border:none;
+  border-radius:40px;
+  background:#e2bd55;
+  color:#111;
+  font-size:20px;
+  font-weight:bold;
+  cursor:pointer;
+  margin-top:5px;
+}
+
+.submit-button:hover{
+  background:#f0ce67;
+}
+
+.form-note{
+  text-align:center;
+  color:#999;
+  font-size:13px;
+  margin-top:15px;
+  line-height:1.7;
+}
+
+/* العرض */
+
 .offer{
   text-align:center;
   padding:45px 15px;
@@ -177,7 +275,12 @@ footer{
   line-height:2;
 }
 
+footer strong{
+  color:#e5c45f;
+}
+
 @media(max-width:600px){
+
   h1{
     font-size:26px;
   }
@@ -189,6 +292,10 @@ footer{
   .price{
     font-size:36px;
   }
+
+  .order-box{
+    padding:22px 15px;
+  }
 }
 </style>
 </head>
@@ -199,6 +306,7 @@ footer{
   <div class="logo">ORÉLIA NA BEAUTY</div>
   <div>الجمال يبدأ من العناية بنفسك ✨</div>
 </header>
+
 
 <div class="hero">
 
@@ -224,9 +332,8 @@ footer{
     </div>
 
     <a class="whatsapp"
-       href="https://wa.me/212613386049?text=السلام%20عليكم،%20بغيت%20نطلب%20مجموعة%20العناية%20بالبشرة%20والجسم%20بـ199%20درهم،%20والتوصيل%20مجاني.%0Aالاسم:%0Aالهاتف:%0Aالمدينة:%0Aالعنوان:"
-       target="_blank">
-       📲 اطلبي الآن عبر واتساب
+       href="#order">
+       📲 اطلبي الآن
     </a>
 
   </div>
@@ -261,7 +368,7 @@ footer{
 <div class="emoji">🌸</div>
 <h3>ماسك القنبلة الصحراوية</h3>
 <p>
-للتفتيح والتبييض والعناية بمظهر البشرة ومنحها إشراقة جميلة.
+للعناية بمظهر البشرة ومنحها إشراقة جميلة.
 </p>
 </div>
 
@@ -285,7 +392,7 @@ footer{
 <div class="emoji">👣</div>
 <h3>كريم كعب الغزال</h3>
 <p>
-يساعد على ترطيب القدمين والعناية بمظهر الجلد الجاف والمتشقق.
+يساعد على ترطيب القدمين والعناية بمظهر الجلد الجاف.
 </p>
 </div>
 
@@ -311,6 +418,91 @@ footer{
 </section>
 
 
+<!-- استمارة الطلب -->
+
+<section class="order-section" id="order">
+
+<div class="order-box">
+
+<h2>🛒 اطلبي الآن</h2>
+
+<p class="order-subtitle">
+عمّري المعلومات ديالك، ومن بعد ضغطي على إرسال الطلب.
+<br>
+الثمن: <strong>199 درهم</strong> والتوصيل مجاني 🇲🇦
+</p>
+
+<form onsubmit="sendOrder(event)">
+
+<div class="form-group">
+<label for="name">👤 الاسم الكامل</label>
+<input
+type="text"
+id="name"
+placeholder="مثال: فاطمة الزهراء"
+required>
+</div>
+
+
+<div class="form-group">
+<label for="phone">📞 رقم الهاتف</label>
+<input
+type="tel"
+id="phone"
+placeholder="06XXXXXXXX"
+pattern="[0-9]{10}"
+required>
+</div>
+
+
+<div class="form-group">
+<label for="city">📍 المدينة</label>
+<input
+type="text"
+id="city"
+placeholder="مثال: أكادير"
+required>
+</div>
+
+
+<div class="form-group">
+<label for="address">🏠 العنوان بالتفصيل</label>
+<textarea
+id="address"
+placeholder="مثال: حي السلام، زنقة ...، رقم ..."
+required></textarea>
+</div>
+
+
+<div class="form-group">
+<label for="quantity">📦 الكمية</label>
+
+<select id="quantity" required>
+<option value="1">1 باك — 199 درهم</option>
+<option value="2">2 باكات — 398 درهم</option>
+<option value="3">3 باكات — 597 درهم</option>
+<option value="4">4 باكات — 796 درهم</option>
+<option value="5">5 باكات — 995 درهم</option>
+</select>
+
+</div>
+
+
+<button type="submit" class="submit-button">
+📲 إرسال الطلب عبر واتساب
+</button>
+
+<p class="form-note">
+بعد الضغط على الزر غادي يتحل واتساب ويتبعث ليك الطلب جاهز للتأكيد.
+</p>
+
+</form>
+
+</div>
+
+</section>
+
+
 <div class="offer">
 
 <h2>🔥 العرض ما خاصكش تفوتيه</h2>
@@ -326,8 +518,7 @@ footer{
 </p>
 
 <a class="whatsapp"
-   href="https://wa.me/212613386049?text=السلام%20عليكم،%20بغيت%20نطلب%20مجموعة%20العناية%20بالبشرة%20والجسم%20بـ199%20درهم،%20والتوصيل%20مجاني.%0Aالاسم:%0Aالهاتف:%0Aالمدينة:%0Aالعنوان:"
-   target="_blank">
+   href="#order">
    🛍️ اطلبي المجموعة الآن
 </a>
 
@@ -348,9 +539,75 @@ footer{
 
 <br><br>
 
-© 2026 ORÉLIA NA BEAUTY
+<strong>© 2026 ORÉLIA NA BEAUTY</strong>
 
 </footer>
 
+
+<script>
+
+function sendOrder(event){
+
+  event.preventDefault();
+
+  const name =
+    document.getElementById("name").value.trim();
+
+  const phone =
+    document.getElementById("phone").value.trim();
+
+  const city =
+    document.getElementById("city").value.trim();
+
+  const address =
+    document.getElementById("address").value.trim();
+
+  const quantity =
+    document.getElementById("quantity").value;
+
+  const total =
+    199 * Number(quantity);
+
+
+  const message =
+`🛒 طلب جديد من المتجر
+
+👤 الاسم الكامل:
+${name}
+
+📞 رقم الهاتف:
+${phone}
+
+📍 المدينة:
+${city}
+
+🏠 العنوان:
+${address}
+
+📦 الكمية:
+${quantity} باك
+
+💰 المجموع:
+${total} درهم
+
+🚚 التوصيل: مجاني
+
+شكراً لكم ❤️`;
+
+
+  const whatsappNumber = "212613386049";
+
+  const whatsappURL =
+    "https://wa.me/" +
+    whatsappNumber +
+    "?text=" +
+    encodeURIComponent(message);
+
+  window.open(whatsappURL, "_blank");
+
+}
+
+</script>
+
 </body>
-</html>
+  </html>
